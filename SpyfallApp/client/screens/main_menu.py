@@ -7,8 +7,9 @@ from kivy.app import App
 from kivy.clock import mainthread
 
 class MainMenu(Screen):
-    def init(self, **kwargs):
-        super().init(**kwargs)
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
         self.status = Label(text="")  # اول status رو بساز
         self.build_ui()
         app = App.get_running_app()
@@ -24,7 +25,7 @@ class MainMenu(Screen):
 
         self.room_code = TextInput(hint_text="Room code (for join)", multiline=False, size_hint=(1, 0.1))
         layout.add_widget(self.room_code)
-
+        
         btn_create = Button(text="Create Room", size_hint=(1, 0.15))
         btn_create.bind(on_press=self.create_room)
         layout.add_widget(btn_create)

@@ -41,10 +41,7 @@ class GameClient:
         if self.callback:
             self.callback({"type": "connection", "status": "disconnected"})
 
-    def send(self, action, payload=None):
-        if self.ws and self.connected:
-            msg = json.dumps({"action": action, "payload": payload or {}})
-            self.ws.send(msg)
+
     def send(self, action, payload=None):
         msg = {"action": action, "payload": payload or {}}
         print(f"🔵 CLIENT SENDING: {msg}")  # ← اینو اضافه کن

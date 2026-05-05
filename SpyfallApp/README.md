@@ -11,3 +11,6 @@ A digital version of the popular social deduction game "Spyfall".
 ## How to Run
 
 1. **Start the server:**
+   server.py
+2. **Start the Client:**
+    main.py
